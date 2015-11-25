@@ -13,7 +13,6 @@
 
 @property(nonatomic,strong) UITableView *ptableView;
 
-@property(nonatomic,strong) UIImageView *hImageView;
 
 @end
 

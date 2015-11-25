@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "UIScrollView+CustomRefresh.h"
 
 static NSString * Identifier =@"content";
 
-const CGFloat image_h  =260;
 
 @interface ViewController ()
 
@@ -22,8 +22,9 @@ const CGFloat image_h  =260;
     [super viewDidLoad];
     
     [self.view addSubview:self.ptableView];
-    [self.ptableView addSubview:self.hImageView];
+
     
+    [self.ptableView addHeaderImageHandel:[UIImage imageNamed:@"car"]];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -42,17 +43,7 @@ const CGFloat image_h  =260;
     return cell;
 }
 
-#pragma mark scrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat y=scrollView.contentOffset.y;
-    if (y<image_h) {
-        CGRect frame = self.hImageView.frame;
-        frame.origin.y = y;
-        frame.size.height =  -y;
-        self.hImageView.frame = frame;
-    }
-}
 
 
 #pragma mark getter
@@ -62,20 +53,11 @@ const CGFloat image_h  =260;
         _ptableView =[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         [_ptableView setDataSource:self];
         [_ptableView setDelegate:self];
-        [_ptableView setContentInset:UIEdgeInsetsMake(image_h, 0, 0, 0)];
     }
     return _ptableView;
 }
 
--(UIImageView*)hImageView{
-    if (!_hImageView) {
-        _hImageView =[[UIImageView alloc] init];
-        [_hImageView setImage:[UIImage imageNamed:@"car"]];
-        [_hImageView setContentMode:UIViewContentModeScaleAspectFill];
-        [_hImageView setFrame:CGRectMake(0, -image_h, CGRectGetWidth(self.view.frame), image_h)];
-    }
-    return _hImageView;
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
