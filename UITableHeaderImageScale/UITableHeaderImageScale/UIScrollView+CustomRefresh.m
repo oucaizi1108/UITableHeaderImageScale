@@ -9,6 +9,18 @@
 #import "UIScrollView+CustomRefresh.h"
 #import <objc/runtime.h>
 
+@interface CustomRefreshView ()
+
+/**
+ *  kvo监听当前视图是否处于监听状态
+ */
+@property(nonatomic,assign) BOOL isObserving;
+
+@property(nonatomic) UIImage *picImage;
+
+@end
+
+
 static CGFloat const RefreshViewHeight = 260;
 static const char *refreshViewKey ;
 
@@ -16,12 +28,12 @@ static const char *refreshViewKey ;
 
 @dynamic showPullToRefresh,refreshView;
 
--(void)addHeaderImageHandel:(UIImage*)image{
+-(void)addHeaderImage:(UIImage*)image{
     
     if (!self.refreshView) {
         [self setContentInset:UIEdgeInsetsMake(RefreshViewHeight, 0, 0, 0)];
         CustomRefreshView *view=[[CustomRefreshView alloc] initWithFrame:CGRectMake(0, -RefreshViewHeight, CGRectGetWidth(self.bounds), RefreshViewHeight)];
-        view.pic_image=image;
+        view.picImage=image;
         self.refreshView=view;
         [self.refreshView setBackgroundColor:[UIColor redColor]];
         [self addSubview:self.refreshView];
@@ -71,6 +83,9 @@ static const char *refreshViewKey ;
 
 @implementation CustomRefreshView
 
+
+@synthesize hImageView=_hImageView;
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -81,9 +96,20 @@ static const char *refreshViewKey ;
     return self;
 }
 
--(void)setPic_image:(UIImage *)pic_image{
-    _pic_image=pic_image;
-    [self.hImageView setImage:_pic_image];
+-(void)setPicImage:(UIImage *)picImage{
+    _picImage=picImage;
+    [self.hImageView setImage:_picImage];
+}
+
+-(void)willMoveToSuperview:(UIView *)newSuperview{
+    if (self.superview&&newSuperview==nil) {
+        UIScrollView *scrollView=(UIScrollView *)self.superview;
+        if (scrollView.showPullToRefresh) {
+            if (self.isObserving) {
+                [scrollView removeObserver:self forKeyPath:@"contentOffset"];
+            }
+        }
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

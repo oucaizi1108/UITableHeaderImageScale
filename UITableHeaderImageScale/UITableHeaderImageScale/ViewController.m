@@ -24,7 +24,7 @@ static NSString * Identifier =@"content";
     [self.view addSubview:self.ptableView];
 
     
-    [self.ptableView addHeaderImageHandel:[UIImage imageNamed:@"car"]];
+    [self.ptableView addHeaderImage:[UIImage imageNamed:@"car"]];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
