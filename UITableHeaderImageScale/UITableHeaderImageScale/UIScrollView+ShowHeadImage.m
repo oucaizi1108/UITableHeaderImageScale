@@ -6,7 +6,7 @@
 //  Copyright © 2015年 oucaizi. All rights reserved.
 //
 
-#import "UIScrollView+CustomRefresh.h"
+#import "UIScrollView+ShowHeadImage.h"
 #import <objc/runtime.h>
 
 @interface CustomRefreshView ()
@@ -24,9 +24,9 @@
 static CGFloat const RefreshViewHeight = 260;
 static const char *refreshViewKey ;
 
-@implementation UIScrollView (CustomRefresh)
+@implementation UIScrollView (ShowHeadImage)
 
-@dynamic showPullToRefresh,refreshView;
+@dynamic showHeadImage,refreshView;
 
 -(void)addHeaderImage:(UIImage*)image{
     
@@ -35,9 +35,8 @@ static const char *refreshViewKey ;
         CustomRefreshView *view=[[CustomRefreshView alloc] initWithFrame:CGRectMake(0, -RefreshViewHeight, CGRectGetWidth(self.bounds), RefreshViewHeight)];
         view.picImage=image;
         self.refreshView=view;
-        [self.refreshView setBackgroundColor:[UIColor redColor]];
         [self addSubview:self.refreshView];
-        self.showPullToRefresh = YES;
+        self.showHeadImage = YES;
     }
 }
 
@@ -53,8 +52,8 @@ static const char *refreshViewKey ;
   return   objc_getAssociatedObject(self, &refreshViewKey);
 }
 
--(void)setShowPullToRefresh:(BOOL)showPullToRefresh{
-    if (showPullToRefresh) {
+-(void)setShowHeadImage:(BOOL)showHeadImage{
+    if (showHeadImage) {
         //self.refreshView 作为kvo观察者
         if (!self.refreshView.isObserving) {
             [self addObserver:self.refreshView forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
@@ -101,7 +100,7 @@ static const char *refreshViewKey ;
 -(void)willMoveToSuperview:(UIView *)newSuperview{
     if (self.superview&&newSuperview==nil) {
         UIScrollView *scrollView=(UIScrollView *)self.superview;
-        if (scrollView.showPullToRefresh) {
+        if (scrollView.showHeadImage) {
             if (self.isObserving) {
                 [scrollView removeObserver:self forKeyPath:@"contentOffset"];
             }

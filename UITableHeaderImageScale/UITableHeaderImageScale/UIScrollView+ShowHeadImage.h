@@ -11,11 +11,11 @@
 @class CustomRefreshView;
 
 
-@interface UIScrollView (CustomRefresh)
+@interface UIScrollView (ShowHeadImage)
 
 @property(nonatomic,strong,readonly) CustomRefreshView *refreshView;
 
-@property(nonatomic,assign) BOOL showPullToRefresh;
+@property(nonatomic,assign) BOOL showHeadImage;
 
 -(void)addHeaderImage:(UIImage*)image;
 

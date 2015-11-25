@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIScrollView+CustomRefresh.h"
+#import "UIScrollView+ShowHeadImage.h"
 
 static NSString * Identifier =@"content";
 

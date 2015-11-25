@@ -13,7 +13,7 @@
 		34463BA01C045B8B009CA543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34463B9F1C045B8B009CA543 /* Assets.xcassets */; };
 		34463BA31C045B8B009CA543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34463BA11C045B8B009CA543 /* LaunchScreen.storyboard */; };
 		34463BAC1C045BCF009CA543 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463BAB1C045BCF009CA543 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3489486A1C046DF000597884 /* UIScrollView+CustomRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 348948691C046DF000597884 /* UIScrollView+CustomRefresh.m */; settings = {ASSET_TAGS = (); }; };
+		3489486A1C046DF000597884 /* UIScrollView+ShowHeadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 348948691C046DF000597884 /* UIScrollView+ShowHeadImage.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		34463BA41C045B8B009CA543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34463BAA1C045BCF009CA543 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		34463BAB1C045BCF009CA543 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		348948681C046DF000597884 /* UIScrollView+CustomRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CustomRefresh.h"; sourceTree = "<group>"; };
-		348948691C046DF000597884 /* UIScrollView+CustomRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CustomRefresh.m"; sourceTree = "<group>"; };
+		348948681C046DF000597884 /* UIScrollView+ShowHeadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ShowHeadImage.h"; sourceTree = "<group>"; };
+		348948691C046DF000597884 /* UIScrollView+ShowHeadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ShowHeadImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 		34463B921C045B8B009CA543 /* UITableHeaderImageScale */ = {
 			isa = PBXGroup;
 			children = (
-				348948681C046DF000597884 /* UIScrollView+CustomRefresh.h */,
-				348948691C046DF000597884 /* UIScrollView+CustomRefresh.m */,
+				348948681C046DF000597884 /* UIScrollView+ShowHeadImage.h */,
+				348948691C046DF000597884 /* UIScrollView+ShowHeadImage.m */,
 				34463B961C045B8B009CA543 /* AppDelegate.h */,
 				34463B971C045B8B009CA543 /* AppDelegate.m */,
 				34463BAA1C045BCF009CA543 /* ViewController.h */,
@@ -154,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3489486A1C046DF000597884 /* UIScrollView+CustomRefresh.m in Sources */,
+				3489486A1C046DF000597884 /* UIScrollView+ShowHeadImage.m in Sources */,
 				34463BAC1C045BCF009CA543 /* ViewController.m in Sources */,
 				34463B981C045B8B009CA543 /* AppDelegate.m in Sources */,
 				34463B951C045B8B009CA543 /* main.m in Sources */,
