@@ -69,9 +69,6 @@ static const char *refreshViewKey ;
     }
 }
 
--(BOOL)showPullToRefresh{
-    return !self.refreshView.hidden;
-}
 
 -(void)dealloc
 {
