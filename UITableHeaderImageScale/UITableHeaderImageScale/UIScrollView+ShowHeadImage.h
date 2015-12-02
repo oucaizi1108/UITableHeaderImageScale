@@ -17,7 +17,8 @@
 
 @property(nonatomic,assign) BOOL showHeadImage;
 
--(void)addHeaderImage:(UIImage*)image;
+
+-(void)addHeaderImage:(UIImage*)image icon:(UIImage*)icon;
 
 @end
 
@@ -25,5 +26,7 @@
 @interface CustomRefreshView : UIView
 
 @property(nonatomic,strong,readonly) UIImageView *hImageView;
+
+
 
 @end

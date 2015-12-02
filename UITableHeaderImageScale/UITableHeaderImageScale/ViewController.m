@@ -23,8 +23,7 @@ static NSString * Identifier =@"content";
     
     [self.view addSubview:self.ptableView];
 
-    
-    [self.ptableView addHeaderImage:[UIImage imageNamed:@"car"]];
+    [self.ptableView addHeaderImage:[UIImage imageNamed:@"car"] icon:[UIImage imageNamed:@"background"]];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -39,6 +38,10 @@ static NSString * Identifier =@"content";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:Identifier];
     if (!cell) {
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Identifier];
+    }
+    if (indexPath.row==0) {
+        cell.textLabel.text=@"primy";
+   
     }
     return cell;
 }
