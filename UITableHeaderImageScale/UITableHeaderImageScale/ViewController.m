@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "UIScrollView+ShowHeadImage.h"
-#import "Person.h"
+
 static NSString * Identifier =@"content";
 
 
@@ -23,10 +23,6 @@ static NSString * Identifier =@"content";
     
     [self.view addSubview:self.ptableView];
 
-    Person * p = [[Person alloc] init];
-    [p setValue:@"ss" forKey:@"name"];
-    NSLog(@"==%@",[p valueForKey:@"name"]);
-    
     [self.ptableView addHeaderImage:[UIImage imageNamed:@"car"] icon:[UIImage imageNamed:@"background"]];
     // Do any additional setup after loading the view, typically from a nib.
 }
