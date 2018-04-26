@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341E74BD20919979005462DC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 341E74BC20919979005462DC /* Person.m */; };
 		34463B951C045B8B009CA543 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463B941C045B8B009CA543 /* main.m */; };
 		34463B981C045B8B009CA543 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463B971C045B8B009CA543 /* AppDelegate.m */; };
 		34463B9E1C045B8B009CA543 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34463B9C1C045B8B009CA543 /* Main.storyboard */; };
 		34463BA01C045B8B009CA543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34463B9F1C045B8B009CA543 /* Assets.xcassets */; };
 		34463BA31C045B8B009CA543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34463BA11C045B8B009CA543 /* LaunchScreen.storyboard */; };
-		34463BAC1C045BCF009CA543 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463BAB1C045BCF009CA543 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3489486A1C046DF000597884 /* UIScrollView+ShowHeadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 348948691C046DF000597884 /* UIScrollView+ShowHeadImage.m */; settings = {ASSET_TAGS = (); }; };
+		34463BAC1C045BCF009CA543 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34463BAB1C045BCF009CA543 /* ViewController.m */; };
+		3489486A1C046DF000597884 /* UIScrollView+ShowHeadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 348948691C046DF000597884 /* UIScrollView+ShowHeadImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		341E74BB20919979005462DC /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		341E74BC20919979005462DC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		34463B901C045B8B009CA543 /* UITableHeaderImageScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableHeaderImageScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34463B941C045B8B009CA543 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		34463B961C045B8B009CA543 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				34463BA11C045B8B009CA543 /* LaunchScreen.storyboard */,
 				34463BA41C045B8B009CA543 /* Info.plist */,
 				34463B931C045B8B009CA543 /* Supporting Files */,
+				341E74BB20919979005462DC /* Person.h */,
+				341E74BC20919979005462DC /* Person.m */,
 			);
 			path = UITableHeaderImageScale;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			files = (
 				3489486A1C046DF000597884 /* UIScrollView+ShowHeadImage.m in Sources */,
 				34463BAC1C045BCF009CA543 /* ViewController.m in Sources */,
+				341E74BD20919979005462DC /* Person.m in Sources */,
 				34463B981C045B8B009CA543 /* AppDelegate.m in Sources */,
 				34463B951C045B8B009CA543 /* main.m in Sources */,
 			);
